@@ -24,3 +24,27 @@ function pali (word) {
 }}
 
 pali(word);
+
+/* let number = prompt("insert a number");
+console.log(number); */
+
+let userNumber = document.getElementById('userNumber');
+let evenOdd = document.getElementById('oddEven');
+let clickUserNumber = document.getElementById('clickUserNumber');
+
+function sum(a, b) {
+    return a + b;
+}
+
+function getRandomNumber(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+clickUserNumber.addEventListener('click', function() {
+    userNumber = userNumber.value;
+    evenOdd = evenOdd.value;
+    let randomnumber = (getRandomNumber);
+     if (evenOdd === "even" && sum(userNumber, randomnumber) % 2 === 0) {
+console.log("win")
+
+     }
+});
