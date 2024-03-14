@@ -13,11 +13,13 @@ console.log(word);
 console.log(word.length);
 
 function pali (word) {
-    for (let i = 0; i < word.length/2; i++){
-        if (word[i] !== word[word.length-i-1]){
+    for (let i = 0; i < word.length/2; i++){ /* ciclo si ripete numero delle lettere diviso due */
+        if (word[i] !== word[word.length-i-1]){ /* confronto fra la prima lettera e l'ultima etc */
             console.log("false")
             
-        }else return true
+        }else 
+        console.log("true")
+        return true
     
 }}
 
