@@ -12,11 +12,13 @@ let word = prompt("insert a word");
 console.log(word);
 console.log(word.length);
 
-function pali () {
-    for (let i = 0; i < word.length; i++){
-        if (word[i] === word[word.length-1]){
-            console.log("true")
-        }
-    }
-    return true
-}
+function pali (word) {
+    for (let i = 0; i < word.length/2; i++){
+        if (word[i] !== word[word.length-i-1]){
+            console.log("false")
+            
+        }else return true
+    
+}}
+
+pali(word);
