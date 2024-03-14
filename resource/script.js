@@ -40,11 +40,15 @@ function getRandomNumber(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 clickUserNumber.addEventListener('click', function() {
-    userNumber = userNumber.value;
+    userNumber = parseInt(userNumber.value);
     evenOdd = evenOdd.value;
-    let randomnumber = (getRandomNumber);
+    let randomnumber = (getRandomNumber(1,10));
+    console.log(randomnumber);
      if (evenOdd === "even" && sum(userNumber, randomnumber) % 2 === 0) {
 console.log("win")
 
-     }
+     } else if (evenOdd === "odd" && sum(userNumber, randomnumber) % 2 !== 0) {
+        console.log ("win")
+     } else {console.log("lose")}
+     console.log(randomnumber + parseInt(userNumber));
 });
